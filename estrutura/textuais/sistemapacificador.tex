@@ -1,0 +1,37 @@
+\chapter{SISTEMA PACIFICADOR WEB}
+
+% \hspace{1.5cm}
+O Pacificador Web é um sistema de Comando e Controle (C2), membro da Família de aplicativos de Comando e Controle da Força Terrestre (FAC2FTer), utilizado pelo Ministério da Defesa (MD), pelas Forças Armadas e por diversas agências e órgãos de segurança nas operações de Garantia da Lei e da Ordem (GLO) e Grandes eventos. Foi amplamente empregado no período de 2012 e 2014, na Conferência das Nações Unidas para o Desenvolvimento Sustentável (Rio+20), Copa das Confederações, Jornada Mundial da Juventude e Copa do Mundo. Nestas operações o sistema mostrou-se extremamente útil para a manutenção da consciência situacional, tratamento de incidentes, sincronização de ações e apoio a decisão nos diversos escalões empregados, tendo sua utilização intensificada com a integração através de dispositivos móveis, tais como o Sistema Rádio Digital Troncalizado (SRDT) da Motorola, o sistema rádio Falcon III da Harris e sistemas de telefonia móvel com acesso à internet. Devido ao seu emprego bem sucedido nos grandes eventos, aṕos a Copa do Mundo surgiu a necessidade de utilização deste sistema em operações singulares da Força terrestre, tais como operações de Garantia da Lei e da Ordem (GLO) e de adestramento operacional dos comandos militares de área. 
+
+% \hspace{1.5cm}
+O sistema Pacificador Móvel é um aplicativo desenvolvido para smartphones e tablets com sistema operacional Google Android, sua finalidade é fazer com que usuários de dispositivos móveis ligados a redes 3G/4G/5G possam inserir e consumir informações do Sistema Pacificador Web. Tais informações consistem em:
+\begin{itemize}
+ \item posição geográfica em tempo real;
+ \item relatos de situação;
+ \item relatos de incidentes; e
+ \item atualização de estado de ações;
+\end{itemize}
+
+% \emph{Detalhes sobre a operação do Pacificador Móvel devem ser consultados no seu manual.}
+
+% \hspace{1.5cm}
+Convém salientar que as redes de telefonia móvel são gerenciadas por terceiros e portanto não é possível garantir o estabelecimento de conexão em locais com alta concentração de usuários como estádios e manifestações. A perda de conectividade nesta situação pode afetar o envio da posição geográfica em tempo real, o que não é defeito do aplicativo.
+
+% \hspace{1.5cm}
+O Pacificador fundamenta-se no conceito de um Centro de Operações (COp), composto por operadores nas suas estruturas física e por agentes móveis. Os agentes móveis são integrantes do COp realizando tarefas diversas, como comboios, varreduras, segurança de instalações e escoltas. Eles têm consigo um telefone celular Android, com o sistema Pacificador Móvel instalado,  enviando sua localização ao Centro interligado, onde podem enviar relatos de situação, ocorrências e realizar ações a ele designadas na matriz. Outros agentes podem estar dotados de rádio, do sistema troncalizado, com suas localizações enviada através do Mups, Motorola, sendo que neste o Centro só terá visualização das localizações dos agentes no terreno.
+
+% \hspace{1.5cm}
+Nas sedes cada operador realiza o acompanhamento em tempo real dos relatos, ocorrências, localizações, e as realizações das ações de cada agente móvel, há muitas vezes uma tela de maiores dimensões ou um (ou mais) Videowall, com a finalidade de mostrar o cenário, com diversas localizações dos agentes georreferenciados e em maior proporção destas informações. No Teatro de Operações pode existir mais de um COp, para cumprir a missão. O Pacificador Web compartilham continuamente, entre os Centros, informaçṍes relevantes que dão ao COp superior a visão e a capacidade de assumir a responsabilidade sobre as ações que deverão tomar os membros dos COps subordinados, além de delegar ações para os mesmos pela matriz de sincronização. Isto, gera a construção da Consciência Situacional Compartilhada, entre subordinados e decisor, no apoio da condução da operação.
+
+% \hspace{1.5cm}
+Dentro do Sistema os agentes móveis foram divididos de acordo com o modo de operação, o qual caracteriza a função do agente naquele momento. As principais funções são: modo de agente de segurança, comboio, batedor, pontos de segurança, embarcações e escolta aérea. Os oficiais de ligação que geralmente são responsáveis por acompanhar as autoridades durante todos os deslocamentos e atividades oficiais, utiliza o modo comboio e agente de segurança respectivamente. O modo batedor é destinado aos batedores dos diversos sistemas de segurança que estiverem apoiando o Centro. As tropas realizam toda a segurança em diversos pontos específicos durante a GLO ou Grade evento, usando o simbolo ponto de segurança. Já o modo de embarcação é utilizado para navios em geral e os helicópteros, basicamente dos BAvEx, é identificado pelo modo de escolta aérea. Todos os agentes móveis, sejam com rádios trocalizados ou smartphone, nos diversos modo de operação, transmite suas localizações que são replicada para os servidores, para que todos os COps, entre eles o COTer e Ministério da Defesa, alcance a consciência situacional. As transmissão das localizações pelos agentes em campo é realizada sem a intervenção do mesmo, bastando para isto está conectado aos uma dos servidores.
+
+% \hspace{1.5cm}
+A implementação do Pacificador Web baseá-se nos conceitos técnicos, tais como: Consistência no COp, Consistência entre COps e Tolerância a Partição. A Consistência no COp se dar por sabemos que dentro de um mesmo Centro os diversos operadores buscam soluções para os mesmos conjuntos de problemas. Consequentemente, é relevante que a visão operacional seja comum para cada operador, bem como para o decisor, no cenário de arquitetura cliente-servidor. Na busca por uma Consciência Situacional Compartilhada entre os vários Centros de Operação, as informações de COps diferentes devem ser sincronizadas. A Consistência entre COps se dará com o usuário acessando um mesmo servidor ou através de uma replicação de dados entre servidores. Com relação a Tolerância a partição, o sistema deve ser tolerante e flexível a falhas de rede. O Pacificador está configurado em um pool de sítios em cidades diferentes para que cada Centro continue funcionando mesmo que ocorra falta de contato entre alguns e quando a rede é recuperada os dados são sincronizados entre os servidores.
+
+% \hspace{1.5cm}
+Implantação do Sistema Pacificador, que durante a Rio+20 era realizada nos 17 (dezessete) Centros de Operações na cidade do Rio de janeiro/RJ sofreu uma mudança significativa buscando atender a todo o território Nacional. Na preparação para a Copa
+das Confederações no ano de 2013, foi realizado a implantação dos pool de servidores na cidade de Brasília/DF e Rio de Janeiro. As cidades são contingências entre si, além de prover redundância em caso de falha, a existência destes dois pool é justificado pela necessidade de um atendimento nas constante na cidade do Rio de Janeiro. Os servidores localizados em Brasília/DF buscam atender as demandas dos COps em todo o Brasil, pela EBNet.
+
+% \hspace{1.5cm}
+Na próxima sessão será apresentado o Sistema Pacificador em números, através de algumas variáveis dentro da categoria CMilA.
